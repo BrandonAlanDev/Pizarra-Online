@@ -13,7 +13,7 @@ const Pizarra: React.FC<PizarraProps> = ({ width, height }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [dibujando, setDibujando] = useState(false);
-  const [color, setColor] = useState('#000000');
+  const [color, setColor] = useState('#ffffff');
   const [grosor, setGrosor] = useState(5);
   const [historial, setHistorial] = useState<ImageData[]>([]);
   const [indiceHistorial, setIndiceHistorial] = useState(-1);
@@ -214,7 +214,7 @@ const Pizarra: React.FC<PizarraProps> = ({ width, height }) => {
         onMouseMove={dibujar}
         onMouseUp={finalizarDibujo}
         onMouseLeave={finalizarDibujo}
-        style={{margin:'auto', border: '1px solid black' }}
+        className='bg-green-600 m-auto border-2 rounded-2xl border-amber-400'
       />
       <div className='mt-2'>
         {/* Controles existentes */}
